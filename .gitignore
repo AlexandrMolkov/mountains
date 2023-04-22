@@ -1,0 +1,4 @@
+node_modules
+dist
+src/js/libs/
+src/scss/libs/

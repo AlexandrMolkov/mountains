@@ -1,0 +1,169 @@
+.header{
+    z-index: 2;
+    color: #fff;
+
+    animation: from-top .7s, opacity 3s ease;
+
+    padding: {
+        top: 66px;
+        bottom: 20px;
+    };
+
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (max-height: 414px){
+        padding-top: 20px;
+
+    }
+
+    
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+
+
+        @media (max-height: 414px){
+            justify-content: space-evenly;
+            padding-left: 80px;
+            padding-right: 80px;
+    
+        }
+
+    }
+
+
+    .burg {
+        z-index: 101;
+    }
+
+    
+}
+
+.mobile-menu{
+    display: none;
+    height: calc(100vh - 43px);
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    pointer-events: none;
+
+    position: absolute;
+    z-index: 100;
+    
+
+    @media (max-width: $trigger){
+        display: flex;
+    }
+
+    &.show{
+        pointer-events: all;
+        .mobile-menu__wrapper{
+            transform: translateY(0%);
+        }
+    }
+
+    &__wrapper{
+        
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        padding: 25px 20px;
+        background-color: $black;
+        width: 320px;
+
+        transition: transform .5s;
+        transform: translateY(-100%);
+        
+    }
+
+
+}
+
+$trigger: $tablet;
+
+.header__nav{
+    z-index: 10;
+    position: relative;
+    color: #fff;
+
+    font-size: 17px;
+    line-height: 150%;
+
+
+    
+
+    @media (max-width: $trigger) {
+        overflow: hidden;
+        background-color: $black;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: -100%;
+        min-width: 320px;
+        width: 100%;
+        max-width: 320px;
+        height: 100vh;
+        transition: all 0.3s;
+        display: none;
+    }
+
+    & > ul {
+
+        @media (max-width: $laptop){
+            gap: 15px;
+            font-size: 15px;
+        }
+
+        @media (max-width: $trigger) {
+            flex-direction: column;
+            min-width: 320px;
+            height: 100%;
+            padding-top: 150px;
+            text-align: center;        
+            gap: 40px;
+            overflow: auto;
+            justify-content:flex-start;
+
+
+        }
+
+    }
+
+    a {
+
+        &:hover{
+            color: $accent;
+        }
+
+        @media (max-width: $trigger){
+            font-size: 28px;
+        }
+
+        &_current {
+            &::before {
+                @media (max-width: $trigger){
+                    bottom: -14px;
+                    width: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            } 
+        }
+    }
+
+
+}
+
+.header__nav.show {
+    @media (max-width: $trigger) {
+        left: 0;
+        z-index: 100;
+    }
+}

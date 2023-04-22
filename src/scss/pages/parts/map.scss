@@ -1,0 +1,38 @@
+.map-section {
+    padding-top: 180px;
+    padding-bottom: 180px;
+
+    &:hover {
+        filter: brightness(1) ;
+    }
+
+    &__content{
+        position: relative;
+        overflow: visible;
+        
+    
+        &::before {
+            content: "V";
+            font-family: 'Playfair';
+            position: absolute;
+            top: -75px;
+            left: -178px;
+            font-weight: 600;
+            font-size: 400px;
+            line-height: 533px;
+            text-align: center;
+            opacity: 0.02;
+        }
+    }
+
+    &__title{
+        margin-bottom: 100px;
+    }
+
+
+    &__map{
+        background: #ccc;
+
+        height: 358px;
+    }
+}

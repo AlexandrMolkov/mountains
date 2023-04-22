@@ -1,0 +1,41 @@
+.logo{
+
+    
+    font-family: 'Book Antiqua';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    letter-spacing: 0.01em;
+    display: inline-block;
+    text-transform: capitalize;
+
+    transition: opacity .1s;
+    position: relative;
+
+    &:hover{
+        opacity: .8;
+    }
+    &:active{
+        opacity: .6;
+    }
+
+
+    &__image-main{
+        width: 186px;
+        height: 63px;
+
+        @media (max-width: 539px){
+            width: 150px;
+        }
+
+    }
+
+    a{
+        &:focus{
+            outline: 0;
+            opacity: .8;
+        }
+    }
+}

@@ -1,0 +1,157 @@
+.product-card-slider{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+
+    aspect-ratio: 1/1;
+
+    &__wrapper{
+        overflow: hidden;
+    }
+
+    &.init &__slide{
+        opacity: 0;
+    }
+    &.init &__slide.active{
+        opacity: 1;
+    }
+
+    &__slide{
+        opacity: 1;
+        transition: opacity .6s;
+
+        &:not(:first-child){
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        & img{
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    
+    &__pagination{
+        padding: 5px 0;
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    &__pagination-btn{
+        width: 12px;
+        height: 12px;
+        border: 0;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;   
+            background: #E3E3E3;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+        &_active{
+
+            &::before {
+                background-color: #ccc;
+                
+            }
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+
+        .product-card-slider__navigation{
+            opacity: 1;
+        }
+    }
+    &__navigation{
+        width: 100%;
+
+        opacity: 0;
+        transition: opacity .3s;
+
+        &-prev, &-next{
+            top: 50%;
+            background: transparent;
+            width: 32px;
+            height: 32px;
+            border: 0;
+
+            transition: opacity .5;
+
+            opacity: .7;
+
+            &.disabled {
+                opacity: .2;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 32px;
+                height: 3px;
+                
+                background-color: $accent;   
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 32px;
+                height: 3px;
+
+                background-color: $accent;   
+            }
+
+        }
+        &-prev{
+            position: absolute;
+            left: 5px;
+
+            &::before { 
+                transform: rotate(-30deg) translateY(8px);
+            }
+            &::after {
+                transform: rotate(30deg) translateY(-8px);
+            }
+        }
+        &-next{
+            position: absolute;
+            right: 5px;
+            transform: rotate(180deg);
+            &::before { 
+                transform: rotate(-30deg) translateY(8px);
+            }
+            &::after {
+                transform: rotate(30deg) translateY(-8px);
+            }
+
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.tabs {
+    $borderWeight: 0px;
+    $borderColor: #dee2e6;  
+
+    &__buttons{
+        display: flex;
+        gap: 30px;
+    }
+
+    &__button{
+        $padding: 5px;
+        background-color: #fff;
+        color: #0d6efd;
+        padding: $padding;
+        border: $borderWeight solid transparent;
+        margin-bottom: -1px;
+        transition: background-color 0.3s;
+        position: relative;
+        transition: color .3s;
+
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 150%;
+
+        &_current{
+            color: #000;
+            border: $borderWeight solid $borderColor;
+            border-bottom: $borderWeight solid transparent;
+        }
+    }
+
+    &__content{
+        padding-top: 5px;
+        transition: opacity 0.3s;
+        opacity: 1;
+
+        line-height: 150%;
+
+        display: none;
+
+        @media (max-width: $tablet){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media (max-width: 1200px){
+            position: relative;
+        }
+        
+        &_active{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        &_hidden{
+            opacity: 0;
+            
+        }
+
+    }
+}

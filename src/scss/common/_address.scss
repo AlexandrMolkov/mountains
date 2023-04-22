@@ -1,0 +1,56 @@
+.address{
+    font-style: normal;
+    font-size: 15px;
+    line-height: 150%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &_header{
+        gap: 5px;
+    }
+    
+    @media (max-width: 539px){
+        width: auto;
+        margin-left: auto;
+        flex-direction: column;
+    }
+
+    &__social{
+        display: flex;
+        gap: 12px;
+    }
+
+    &__soc-link{
+        font-size: 12px;
+        line-height: 150%;
+        display: block;
+
+        &_icon-telegram,&_icon-watsapp,&_icon-viber{
+            width: 40px;
+            height: 40px;
+        }
+        &_icon-telegram{
+            background-image: url(../img/svg/social/telegram.svg);
+        }
+        &_icon-watsapp{
+            background-image: url(../img/svg/social/whatsapp.svg);
+        }
+        &_icon-viber{
+            background-image: url(../img/svg/social/viber.svg);
+        }
+    }
+
+    &__time {
+        color: #ccc2;
+        margin-bottom: 10px;
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

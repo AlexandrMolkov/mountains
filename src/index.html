@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="wrapper" id="container">
+
+        <header class="header">
+            <div class="blur"></div>
+            <div class="container-big">
+                <div class="header__content">
+
+                    <a class="logo" href="index.html">ЛОГО</a>
+                    
+                        <nav class="nav header__nav" id="header-nav">
+                            <ul class="nav__list">
+                                <li class="nav__li">
+                                    <a class="nav__link" href="#">Снаряжение</a>
+                                </li>
+                                <li class="nav__li">
+                                    <a class="nav__link" href="#">О нас</a>
+                                </li>
+                                <li class="nav__li">
+                                    <a class="nav__link" href="#">Блог</a>
+                                </li>
+                            </ul>
+                        </nav> 
+
+                        <div class="burg" data-target="#header-nav">
+                            <div class="burg__inner"></div>
+                        </div>
+                    
+                    <button class="account">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="account__icon" fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM5.07 16.28C5.5 15.38 8.12 14.5 10 14.5C11.88 14.5 14.51 15.38 14.93 16.28C13.57 17.36 11.86 18 10 18C8.14 18 6.43 17.36 5.07 16.28ZM16.36 14.83C14.93 13.09 11.46 12.5 10 12.5C8.54 12.5 5.07 13.09 3.64 14.83C2.62 13.49 2 11.82 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 11.82 17.38 13.49 16.36 14.83ZM10 4C8.06 4 6.5 5.56 6.5 7.5C6.5 9.44 8.06 11 10 11C11.94 11 13.5 9.44 13.5 7.5C13.5 5.56 11.94 4 10 4ZM10 9C9.17 9 8.5 8.33 8.5 7.5C8.5 6.67 9.17 6 10 6C10.83 6 11.5 6.67 11.5 7.5C11.5 8.33 10.83 9 10 9Z" fill="#fff"/>
+                            </svg>
+                            <span>Вход</span>
+                    </button>
+
+                </div> <!-- header__content -->
+            </div> <!-- container -->
+        </header>
+
+        <main class="main">
+
+            <section class="hero" id="hero" data-anchor="1">
+
+                <div class="container-big">
+
+                    <div class="hero__content">
+
+                        <p class="text-dec hero__text">Путеводитель</p>
+
+                        <h1 class="hero__title">
+                            Будьте готовы к горам и не только!
+                        </h1>
+
+                        <a class="hero__link" href="#"> 
+
+                            <span class="hero__btn-text">
+                                подробнее
+                            </span>
+
+                            <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="hero__btn-icon" d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white"/>
+                                </svg>
+                                
+                        </a>
+
+                    </div> <!-- hero__content -->
+                    
+                </div>  <!-- container -->
+
+            </section> <!-- hero -->
+
+            <section class="tours">
+                <div class="container">
+                    <h2 class="tours__title vishid">туры</h2>
+
+                    <div class="tours__items">
+
+                        <article class="tour" id="first" data-anchor="2">
+
+                            <div class="tour__inner">
+
+                                <div class="tour__info" data-anim="left" data-before-content="01">
+                                
+                                    <div class="tour__info-inner">
+                                
+                                        <p class="text-dec tour__info-text-dec">Давайте начнем</p>
+                                
+                                        <h3 class="tour__info-title">Какой ты уровень туриста?</h3>
+                                
+                                        <p class="tour__info-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                
+                                        <a class="tour__info-link" href="#">
+                                
+                                            <span class="tour__info-link-text">подробнее</span>
+                                
+                                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="tour__info-link-icon"  d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z" fill="#FBD784"/>
+                                            </svg>
+                                                
+                                        </a>
+                                
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="tour__image-wrapper">
+                                    <img class="tour__image" width="566" height="720" src="img/image_1.jpg" alt="речка и гора">
+                                </div>
+                                
+
+                            </div> <!-- tour__inner -->
+                            
+                        </article>
+
+                        <article class="tour" id="second" data-anchor="3">
+
+                            <div class="tour__inner">
+                                <div class="tour__info" data-anim="right" data-before-content="02">
+                                
+                                    <div class="tour__info-inner">
+                                
+                                        <p class="text-dec tour__info-text-dec">Основы походов</p>
+                                
+                                        <h3 class="tour__info-title">Правильный выбор походного снаряжени</h3>
+                                
+                                        <p class="tour__info-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                
+                                        <a class="tour__info-link" href="#">
+                                
+                                            <span class="tour__info-link-text">подробнее</span>
+                                
+                                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="tour__info-link-icon"  d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z" fill="#FBD784"/>
+                                            </svg>
+                                                
+                                        </a>
+                                
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="tour__image-wrapper">
+                                    <img class="tour__image" width="566" height="720" src="img/image_2.jpg" alt="речка и гора">
+                                </div>
+
+                            </div> <!-- tour__inner -->
+
+
+                        </article>
+
+                        <article class="tour" id="third" data-anchor="4">
+
+                            <div class="tour__inner">
+                                <div class="tour__info" data-anim="left" data-before-content="03">
+                                
+                                    <div class="tour__info-inner">
+                                
+                                        <p class="text-dec tour__info-text-dec">Отправляйтесь вместе с нами</p>
+                                
+                                        <h3 class="tour__info-title">Отройте для себя МИР</h3>
+                                
+                                        <p class="tour__info-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                
+                                        <a class="tour__info-link" href="#">
+                                
+                                            <span class="tour__info-link-text">подробнее</span>
+                                
+                                            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="tour__info-link-icon"  d="M16.5 -6.99382e-07L15.09 1.41L20.67 7L0.5 7L0.5 9L20.67 9L15.08 14.58L16.5 16L24.5 8L16.5 -6.99382e-07Z" fill="#FBD784"/>
+                                            </svg>
+                                                
+                                        </a>
+                                
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="tour__image-wrapper">
+                                    <img class="tour__image" width="566" height="720" src="img/image_1.jpg" alt="речка и гора">
+                                </div>
+                                
+                            </div> <!-- tour__inner -->
+
+                        </article>
+
+                    </div> <!-- tours__items -->
+
+                </div> <!-- container -->
+            </section> <!-- tours -->
+
+            
+        </main>
+
+        <footer class="footer" id="#footer" data-anchor="5">
+            <div class="container">
+
+                <div class="footer__content">
+
+                    <div class="footer__item footer__item_left">
+                        <a class="logo" href="index.html">ЛОГО</a>
+                        <div class="footer__text">
+                            Отправляйтесь вместе с нами и откройте для себя следующий склон, гору и пункт назначения!
+                        </div>
+                    </div>
+
+                    <div class="footer__item">
+
+                        <div class="footer__list-title">
+                            Подробнее в блоге
+                        </div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="#">О туре</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="#">Авторы и писатели</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="#">Написать нам</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="#">Контакты</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="footer__item">
+
+                        <div class="footer__list-title">
+                            Подробнее о туре
+                        </div>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a class="footer__list-link" href="#">Наша команда</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="#">Вакансии</a></li>
+                            <li class="footer__list-item"><a class="footer__list-link" href="#">Галерея</a></li>
+                        </ul>
+
+                    </div>
+
+                </div> <!-- footer__content -->
+
+            </div> <!-- container -->
+
+
+        </footer>
+        
+
+
+
+
+    </div> <!-- wrapper -->
+    
+    <div class="fixed">
+        <div class="container-big fixed__container">
+
+            <div class="social">
+                <div class="social__subscribe">
+                    Подписаться
+                </div>
+                <a class="social__link" href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.8 2H16.2C19.4032 2 22 4.59675 22 7.8V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.8C2 4.59675 4.59675 2 7.8 2ZM7.6 3.99998C5.61177 3.99998 4 5.61176 4 7.59998V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.59998C20 5.61176 18.3882 3.99998 16.4 3.99998H7.6ZM17.25 5.49998C17.9404 5.49998 18.5 6.05963 18.5 6.74998C18.5 7.44034 17.9404 7.99998 17.25 7.99998C16.5596 7.99998 16 7.44034 16 6.74998C16 6.05963 16.5596 5.49998 17.25 5.49998ZM12 6.99998C14.7614 6.99998 17 9.23856 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23856 9.23857 6.99998 12 6.99998ZM12 8.99998C10.3431 8.99998 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 8.99998 12 8.99998Z" fill="white"/>
+                        </svg>
+                </a>
+                <a class="social__link" href="#">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.4592 6.01238C21.6896 6.35373 20.8624 6.58442 19.9944 6.68815C20.8803 6.15701 21.5609 5.31598 21.8813 4.31378C21.052 4.80564 20.1336 5.16278 19.156 5.3552C18.3732 4.52112 17.2579 4 16.0235 4C13.6534 4 11.7317 5.92147 11.7317 8.29155C11.7317 8.6279 11.7697 8.95546 11.8429 9.2696C8.27609 9.0906 5.11375 7.38203 2.99709 4.78551C2.62765 5.41935 2.41601 6.15656 2.41601 6.94309C2.41601 8.43204 3.17364 9.74563 4.32523 10.5153C3.62179 10.4929 2.95996 10.2999 2.38139 9.97846C2.38098 9.99639 2.38098 10.0143 2.38098 10.0324C2.38098 12.1118 3.86033 13.8463 5.82359 14.2406C5.46349 14.3387 5.08434 14.3912 4.69294 14.3912C4.4164 14.3912 4.14755 14.3642 3.88546 14.3142C4.43161 16.0191 6.01653 17.26 7.89454 17.2945C6.42576 18.4457 4.57527 19.1318 2.56453 19.1318C2.21812 19.1318 1.87651 19.1114 1.54077 19.0717C3.44003 20.2894 5.69591 21 8.1195 21C16.0134 21 20.3302 14.4605 20.3302 8.78918C20.3302 8.60314 20.326 8.41805 20.3177 8.23395C21.1563 7.62886 21.8839 6.87302 22.4592 6.01238Z" fill="white"/>
+                    </svg>
+                </a>
+            </div> 
+
+
+            <div class="page-navigation">
+
+                <div class="page-navigation__links">
+                    <a class="page-navigation__link" href="#hero">Start</a>
+                    <a class="page-navigation__link" href="#first">01</a>
+                    <a class="page-navigation__link" href="#second">02</a>
+                    <a class="page-navigation__link" href="#third">03</a>
+                    <a class="page-navigation__link" href="#footer">End</a>
+                </div>
+
+                <div class="page-navigation__progress">
+                        <div class="page-navigation__progress-inner"></div>
+                </div> 
+
+            </div> 
+
+        </div>  <!-- container -->
+    </div> <!-- fixed -->
+
+    <script src="js/app.min.js"></script>
+</body>
+</html>

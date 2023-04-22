@@ -1,0 +1,132 @@
+
+.hero{
+    
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    min-height: 1581px;
+    
+    background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), linear-gradient(358.62deg, #0B1D26 -1.34%, rgba(0, 0, 0, 0) 42.31%), url('../img/hero.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(35%);
+        left: 0;
+        background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 61.38%);   
+    }
+
+
+
+    &__wrapper{
+        margin: 0 auto;
+    }   
+
+    &.current &__content{
+        animation: opacity 1s cubic-bezier(.86,0,.81,.51);
+    }
+
+    &__content{
+        padding-top: 287px;
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        max-width: 1022px;
+        margin: 0 auto;
+
+        @media (max-width: 1199px){
+            padding-left: 15px;
+        }
+
+        @media (max-width: $mobileL){
+            padding-top: 180px;
+        }
+
+        @media (max-height: 414px){
+            padding-top: 80px;
+        }
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 100px;    
+
+        font-family: bookantiqua;
+
+        margin-bottom: 33px;
+
+        @media (max-width: 1199px){
+            font-size: 65px;
+            line-height: 115%;
+            max-width: 769px;
+        }
+
+        @media (max-width: $tablet){
+            font-size: 45px;
+            max-width: 515px;
+        }
+
+        @media (max-height: 414px){
+            font-size: 46px;
+            line-height: 47px;
+            margin-bottom: 24px;
+        }
+        
+        @media (max-width: $mobileL){
+            font-size: 40px;
+            max-width: 277px;
+        }
+    }
+
+    &__text{
+        margin-bottom: 33px;   
+
+        @media (max-height: 414px){
+            margin-bottom: 26px;
+        }
+    }
+
+
+
+    &__link{
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;   
+
+        display: flex;
+        align-items: center;
+
+
+        transition: .3s;
+
+    
+        &:hover{
+            cursor: pointer;
+            color: $accent;
+        }
+
+        .hero__btn-icon{
+            transition: .3s;
+        }
+    
+        &:hover .hero__btn-icon{
+            fill: $accent;
+        }
+    }
+
+    &__btn-text{
+        margin-right: 15px;
+    }
+}
+

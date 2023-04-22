@@ -1,0 +1,57 @@
+
+.breadcrumbs{
+
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+
+    overflow-x: auto;
+    white-space: pre;
+
+    &::-webkit-scrollbar {
+        display: none;           
+    }
+
+    
+
+    &__item{
+
+        color: #ccc;
+
+        &:not(:last-child){
+            color: #ccc;
+            
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+
+        &:last-child{
+            &:hover{
+                cursor: default;
+            }
+        }
+
+        &:not(:first-child){
+
+            margin-left: 10px;
+            padding-left: 10px;
+
+            &::before {
+                content: "/";
+                color: #ccc;
+                position: relative;
+                left: -10px;
+                
+                
+            }
+        }
+
+
+
+    }
+}

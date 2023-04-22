@@ -1,0 +1,17 @@
+*::-webkit-scrollbar {
+    width: 12px;               
+}
+*::-webkit-scrollbar-track {
+    background: #ccc;    
+    opacity: 0.05;  
+
+}
+*::-webkit-scrollbar-thumb {
+    background-color: $accent;    
+    border-radius: 0px;    
+    opacity: 0.05;     
+    border: 3px solid #ccc;  
+}
+*{
+    scrollbar-color: $black $accent;
+}
