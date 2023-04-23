@@ -89,9 +89,11 @@
 $trigger: $tablet;
 
 .header__nav{
+    display: block;
     z-index: 10;
     position: relative;
     color: #fff;
+    
 
     font-size: 17px;
     line-height: 150%;
@@ -101,7 +103,7 @@ $trigger: $tablet;
 
     @media (max-width: $trigger) {
         overflow: hidden;
-        background-color: $black;
+        background-color: $background;
         position: absolute;
         z-index: 10;
         top: 0;
@@ -111,7 +113,6 @@ $trigger: $tablet;
         max-width: 320px;
         height: 100vh;
         transition: all 0.3s;
-        display: none;
     }
 
     & > ul {

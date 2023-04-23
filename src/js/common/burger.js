@@ -1,10 +1,20 @@
 "use strict"
 
-export const burgInit = () => {
-    const blur = document.querySelector('.blur')
+let cbClick
+const clickCallback = (condition) => {
+    if(cbClick) {
+        cbClick.forEach( cb =>{
+            cb(condition)
+        })
+    }
 
+}
+export const burgInit = (clickCallbacks=undefined) => {
+    const blur = document.querySelector('.blur')
+    cbClick = clickCallbacks
     document.addEventListener('click', (e) => {
         if(e.target.classList.contains('blur') || e.target.classList.contains('mobile-menu')){
+            clickCallback(false)
             document.querySelectorAll(`.burg`)
                 .forEach( b => {
                     b.classList.remove(`open`)
@@ -24,6 +34,7 @@ document.querySelectorAll(`.burg`)
         target.addEventListener('click', e => {
             if(e.target.classList.contains('nav__link')) {
                 hideMobileMenu()
+                
             }
         })
 
@@ -37,9 +48,11 @@ document.querySelectorAll(`.burg`)
                 if (document.querySelector(burg.dataset.target).classList.contains(`show`))
                 {
                     document.body.classList.add(`lock`)
+                    clickCallback(true)
                 } else{
                     document.body.classList.remove(`lock`)
                     blur.classList.remove('blur_active')
+                    clickCallback(false)
                 }
             }
         })
@@ -47,16 +60,19 @@ document.querySelectorAll(`.burg`)
 }
 
 
-const hideMobileMenu = () => {
+
+
+export const hideMobileMenu = () => {
     const burg = document.querySelector(`.burg`)
     document.body.classList.remove(`lock`)
     document.querySelector(burg.dataset.target).classList.remove(`show`)
     burg.classList.remove(`open`)
     document.querySelector('.blur').classList.remove('blur_active')
+    clickCallback(false)
 }
 
 
-export const burgResize = () => {
+
+window.addEventListener('resize', () =>  {
     hideMobileMenu()
-}
-
+});

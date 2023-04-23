@@ -1,4 +1,4 @@
-import {burgInit, burgResize} from './common/burger.js'
+import {burgInit, hideMobileMenu} from './common/burger.js'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,12 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // burger
-    burgInit()
+    const hidePagi = condition => {
+        if(condition){
+            document.querySelector('.page-navigation').classList.add('hide')
+            return
+        }
+        document.querySelector('.page-navigation').classList.remove('hide')
+    }
 
-    window.addEventListener('resize', () =>  {
-        burgResize()
-    });
+    // burger
+    burgInit([hidePagi])
+
+
 
      //////////  scrolling
 
@@ -52,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollAnhors.forEach( s => {
             s.classList.remove('current')
         })
+        scrollAnhors[curSection].classList.add('anim')
         scrollAnhors[curSection].classList.add('current')
     }
     setCurrent()
@@ -60,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         l.href = '#'
         l.addEventListener('click', e => {
-
+            hideMobileMenu()
             curSection = paginationLinks.indexOf(e.target)
             scrollTop = 0
 
@@ -83,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
         curSection++
 
         setCurrent()
+
+        hideMobileMenu()
     }
     const up = () => {
         curSection--
@@ -90,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.wrapper').style.transform = `translateY(-${scrollTop}px)`
 
         setCurrent()
+
+        hideMobileMenu()
     }
     
     document.addEventListener('wheel', e => {
@@ -153,6 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         },{once: true}) 
     }) 
+
+    window.addEventListener('resize', e => {
+        scrollTop = 0
+        for (let index = 0; index < curSection; index++) {
+            scrollTop += scrollAnhors[index].offsetHeight
+        }
+        document.querySelector('.wrapper').style.transform = `translateY(-${scrollTop}px)`
+    })
 })
 
 

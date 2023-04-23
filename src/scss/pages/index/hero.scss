@@ -29,12 +29,14 @@
         margin: 0 auto;
     }   
 
-    &.current &__content{
+    &.current &__content, &.anim &__content{
         animation: opacity 1s cubic-bezier(.86,0,.81,.51);
     }
 
     &__content{
         padding-top: 287px;
+
+
 
         display: flex;
         flex-direction: column;
@@ -45,6 +47,9 @@
 
         @media (max-width: 1199px){
             padding-left: 15px;
+            
+            padding-left: 30px;
+            padding-right: 60px;
         }
 
         @media (max-width: $mobileL){

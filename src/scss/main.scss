@@ -417,6 +417,12 @@ a{
     top: -100px;
     right: 20px;
 
+    transition: .3s;
+    
+    &.hide{
+        right: -100px;
+    
+    }
     
 
     @media (max-width: $mobileL){
@@ -433,7 +439,7 @@ a{
         gap: 30px;
         margin-right: 30px;
 
-        animation: opacity 1s .5s ease;
+        animation: opacity 1s  ease;
     }
 
     &__link{
@@ -451,7 +457,7 @@ a{
         width: 3px;
         background: rgba(255, 255, 255, 0.5);
 
-        animation: opacity 1s .5s ease;
+        animation: opacity 1s ease;
     }
 
     &__progress-inner{
