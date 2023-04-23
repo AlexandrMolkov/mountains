@@ -849,6 +849,13 @@ a:hover {
   position: absolute;
   top: -100px;
   right: 20px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.page-navigation.hide {
+  right: -100px;
 }
 
 .page-navigation__links {
@@ -864,8 +871,8 @@ a:hover {
           align-items: flex-end;
   gap: 30px;
   margin-right: 30px;
-  -webkit-animation: opacity 1s 0.5s ease;
-          animation: opacity 1s 0.5s ease;
+  -webkit-animation: opacity 1s ease;
+          animation: opacity 1s ease;
 }
 
 .page-navigation__link {
@@ -881,8 +888,8 @@ a:hover {
   height: 100%;
   width: 3px;
   background: rgba(255, 255, 255, 0.5);
-  -webkit-animation: opacity 1s 0.5s ease;
-          animation: opacity 1s 0.5s ease;
+  -webkit-animation: opacity 1s ease;
+          animation: opacity 1s ease;
 }
 
 .page-navigation__progress-inner {
@@ -1031,6 +1038,7 @@ a:hover {
 }
 
 .header__nav {
+  display: block;
   z-index: 10;
   position: relative;
   color: #fff;
@@ -1082,12 +1090,15 @@ body {
   height: 100vh;
 }
 
-.footer.current .footer__content {
+.footer.current .footer__content,
+.footer.anim .footer__content {
   -webkit-animation: opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
           animation: opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
 }
 
 .footer__content {
+  padding-left: 30px;
+  padding-right: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1165,7 +1176,8 @@ body {
   margin: 0 auto;
 }
 
-.hero.current .hero__content {
+.hero.current .hero__content,
+.hero.anim .hero__content {
   -webkit-animation: opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
           animation: opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
 }
@@ -1270,18 +1282,21 @@ body {
           align-items: flex-start;
 }
 
-.tour.current :nth-child(odd) .tour__info {
+.tour.current :nth-child(odd) .tour__info,
+.tour.anim :nth-child(odd) .tour__info {
   -webkit-animation: from-left 1s, opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
           animation: from-left 1s, opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
 }
 
-.tour:nth-child(even).current .tour__info {
+.tour:nth-child(even).current .tour__info,
+.tour:nth-child(even).anim .tour__info {
   -webkit-animation: from-right 1s, opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
           animation: from-right 1s, opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
 }
 
 .tour__image-wrapper {
   max-width: 50%;
+  height: 100%;
 }
 
 .tour__image-wrapper::before {
@@ -1305,7 +1320,8 @@ body {
   height: auto;
 }
 
-.tour.current .tour__image-wrapper {
+.tour.current .tour__image-wrapper,
+.tour.anim .tour__image-wrapper {
   -webkit-animation: opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
           animation: opacity 1s cubic-bezier(0.86, 0, 0.81, 0.51);
 }
@@ -1410,6 +1426,8 @@ body {
 @media (max-width: 1199px) {
   .hero__content {
     padding-left: 15px;
+    padding-left: 30px;
+    padding-right: 60px;
   }
 
   .hero__title {
@@ -1477,7 +1495,7 @@ body {
 
   .header__nav {
     overflow: hidden;
-    background-color: #050402;
+    background-color: #0B1D26;
     position: absolute;
     z-index: 10;
     top: 0;
@@ -1489,7 +1507,6 @@ body {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-    display: none;
   }
 
   .header__nav > ul {
@@ -1560,6 +1577,7 @@ body {
 
   .tour__image-wrapper {
     max-width: 46%;
+    height: auto;
     position: absolute;
     z-index: -1;
     right: 0;
@@ -1581,6 +1599,7 @@ body {
   .tour__info-inner {
     max-width: 460px;
     margin: 0 auto;
+    padding-right: 60px;
   }
 
   .tour__info-title {
@@ -1726,10 +1745,6 @@ body {
     padding-right: 80px;
   }
 
-  .footer {
-    margin-top: -100px;
-  }
-
   .footer__list-title {
     font-size: 18px;
     line-height: 22px;
@@ -1799,9 +1814,9 @@ body {
     margin-left: 0;
     padding-left: 15px;
     gap: 10px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .tour__info-title {
@@ -1814,7 +1829,7 @@ body {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    right: -30%;
+    right: -40%;
     padding-right: 60px;
     width: 79%;
     font-size: 14px;
